@@ -138,20 +138,20 @@ mod test {
     use super::*;
 
     #[test]
-    fn test_get_cairo1_program_hash() {
-        let hash = get_cairo1_program_hash(17, 1597);
+    fn test_get_cairo1_fact_hash() {
+        let hash = get_cairo1_fact_hash(17, 1597);
         assert(
             hash == 0x5c596ac545e4ca0e8c459ff2af206315e49ec121fdc101d35b5ab038b823923,
-            'Hash mismatch',
+            'Cairo1 fact hash mismatch',
         );
     }
 
     #[test]
-    fn test_get_cairo0_program_hash() {
-        let hash = get_cairo0_program_hash(10, 55);
+    fn test_get_cairo0_fact_hash() {
+        let hash = get_cairo0_fact_hash(10, 55);
         assert(
             hash == 0x1c446d13efc5a3a16387eeec2c9347e9fd44e195b178916e1bd27c0a18220f1,
-            'Hash mismatch',
+            'Cairo0 fact hash mismatch',
         );
     }
 }
