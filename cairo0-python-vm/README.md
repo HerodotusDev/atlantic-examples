@@ -35,7 +35,7 @@ To send query for L2 verification to Atlantic, run:
 bash ./send_query.sh <your_api_key> PROOF_VERIFICATION_ON_L2
 ```
 
-And check our how [Starknet contract](../l2-verification-contract/README.md) works.
+And check out how [Starknet contract](../l2-verification-contract/README.md) works.
 
 ## L1 Verification query
 
@@ -45,4 +45,4 @@ To send query for L1 verification to Atlantic, run:
 bash ./send_query.sh <your_api_key> PROOF_VERIFICATION_ON_L1
 ```
 
-And check our how [Ethereum contract](../l1-verification-contract/README.md) works.
+And check out how [Ethereum contract](../l1-verification-contract/README.md) works.
