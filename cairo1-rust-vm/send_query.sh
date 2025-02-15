@@ -14,5 +14,4 @@ curl --request POST \
     --form 'inputFile=@input.cairo1.txt' \
     --form cairoVersion=cairo1 \
     --form result=PROOF_VERIFICATION_ON_L2 \
-    --form mockFactHash=false \
-    --form externalId=pow_17_cairo1
+    --form mockFactHash=false
