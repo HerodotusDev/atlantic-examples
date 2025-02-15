@@ -12,3 +12,6 @@ snforge_std = "0.36.0"
 
 [scripts]
 test = "snforge test"
+
+[[target.starknet-contract]]
+casm = true
