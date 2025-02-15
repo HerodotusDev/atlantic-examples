@@ -17,3 +17,13 @@ fn fib(mut n: u32) -> u32 {
     };
     a
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_fib() {
+        assert_eq!(fib(10), 55);
+    }
+}
