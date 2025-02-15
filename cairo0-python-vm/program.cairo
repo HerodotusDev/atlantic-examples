@@ -16,7 +16,7 @@ func main(
     %{ ids.input = program_input['input'] %}
 
     assert output_ptr[0] = input;
-    let res = fib(1, 1, input);
+    let res = fib(0, 1, input);
     assert output_ptr[1] = res;
 
     return (
@@ -29,7 +29,7 @@ func main(
 
 func fib(a: felt, b: felt, n: felt) -> felt {
     if (n == 0) {
-        return b;
+        return a;
     }
 
     return fib(a = b, b = a + b, n = n - 1);
