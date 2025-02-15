@@ -38,6 +38,11 @@ fn calculate_cairo1_fact_hash(
     )
 }
 
+// You may use proofs for many programs and/or cairo versions in your contract,
+// so for each program you should specify its layout.
+const CAIRO0_LAYOUT: felt252 = 'recursive';
+const CAIRO1_LAYOUT: felt252 = 'recursive';
+
 // Return Integrity configuration variables for Sharp proofs.
 // Layout depends on what built-ins your program uses.
 fn get_config(layout: felt252) -> (VerifierConfiguration, u32) {
@@ -110,8 +115,15 @@ mod FibonacciRegistry {
         }
 
         fn prove_fibonacci(ref self: ContractState, index: u32, value: u32, cairo_version: bool) {
-            let (config, security_bits) = get_config('recursive');
+            let layout = if cairo_version {
+                CAIRO1_LAYOUT
+            } else {
+                CAIRO0_LAYOUT
+            };
+            let (config, security_bits) = get_config(layout);
 
+            // Realistically, in your contract you will only support one cairo version that you want
+            // to use for proving.
             let fact_hash = if cairo_version {
                 get_cairo1_fact_hash(index, value)
             } else {
