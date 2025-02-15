@@ -1,7 +1,8 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
-    echo "Usage: $0 <api_key>"
+if [ -z "$1" ] || [ -z "$2" ]; then
+    echo "Usage: $0 <api_key> <result>"
+    echo "result can be PROOF_VERIFICATION_ON_L1, PROOF_VERIFICATION_ON_L2 or PROOF_GENERATION"
     exit 1
 fi
 
@@ -13,5 +14,5 @@ curl --request POST \
     --form 'programFile=@compiled.json' \
     --form 'inputFile=@input.json' \
     --form cairoVersion=cairo0 \
-    --form result=PROOF_VERIFICATION_ON_L2 \
+    --form result=$2 \
     --form mockFactHash=false
