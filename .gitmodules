@@ -1,3 +1,6 @@
 [submodule "l1-verification-contract/lib/forge-std"]
 	path = l1-verification-contract/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "offchain-verification/swiftness"]
+	path = offchain-verification/swiftness
+	url = https://github.com/iosis-tech/swiftness
