@@ -21,11 +21,13 @@
 
 ## Get your API key
 
-TODO
+To get your API key, navigate to [https://www.herodotus.cloud/](https://www.herodotus.cloud/), log in and go to API KEYS section.
 
 ## Send to Atlantic
 
 When sending to Atlantic, you can choose where your proof should be verified. For more details check [L1 Proof Verification](http://docs.herodotus.cloud/atlantic/steps/l1-proof-verification) and [L2 Proof Verification](http://docs.herodotus.cloud/atlantic/steps/l2-proof-verification).
+
+You can track your queries in Atlantic > Console section.
 
 ## L2 Verification query
 
