@@ -4,7 +4,7 @@ This directory contains Ethereum contract that stores verified fibonacci numbers
 
 ### Usage
 
-You can use already deployed contract: TODO
+You can use already deployed contract: `0x1b5e3FcceBBED5b8fEa3B12476F98F415E1e2675`
 
 Following functions are available:
 
@@ -15,16 +15,20 @@ Following functions are available:
 
 ### Deploying yourself
 
-TODO
+1. Set up `.env` using `.env.example` template
+
+2. Run `forge build`
+
+3. Run `source .env;forge script script/FibonacciRegistry.s.sol --rpc-url $RPC_URL --broadcast --verify --chain 11155111 --etherscan-api-key $ETHERSCAN_API_KEY`
 
 ### Proving fibonacci
 
 If you have already sent proof for verification on Ethereum, you can prove fibonacci number in the contract using:
 
 For cairo0:
-TODO
+`source .env;cast send --rpc-url $RPC_URL --private-key $PRIVATE_KEY 0x1b5e3FcceBBED5b8fEa3B12476F98F415E1e2675 "proveFibonacci(uint32,uint32,bool)" 10 55 false`
 
 For cairo1:
-TODO
+`source .env;cast send --rpc-url $RPC_URL --private-key $PRIVATE_KEY 0x1b5e3FcceBBED5b8fEa3B12476F98F415E1e2675 "proveFibonacci(uint32,uint32,bool)" 17 1597 true`
 
-Where TODO consists of `index`, `value` and `cairo_version` (0 or 1).
+Where calldata consists of `index`, `value` and `cairo_version` (false for cairo0, true for cairo1).

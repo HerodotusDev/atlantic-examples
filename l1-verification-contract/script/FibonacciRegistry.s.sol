@@ -10,7 +10,7 @@ contract FibonacciRegistryScript is Script {
     function setUp() public {}
 
     function run() public {
-        vm.startBroadcast();
+        vm.startBroadcast(vm.envUint("PRIVATE_KEY"));
 
         fibonacciRegistry = new FibonacciRegistry();
 
