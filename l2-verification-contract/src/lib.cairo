@@ -138,7 +138,7 @@ mod FibonacciRegistry {
             assert(is_valid, 'Proof not verified');
 
             // This is specific to your application.
-            // After assert above, you are sure that integrity verified the program.
+            // After assert above, you are sure that Integrity verified the program.
             self.fibonacci_values.entry(index).write(Option::Some(value));
             self.emit(Event::FibonacciProven(FibonacciProven { index, value }));
         }
