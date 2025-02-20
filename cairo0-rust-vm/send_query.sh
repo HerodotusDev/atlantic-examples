@@ -10,9 +10,8 @@ curl --request POST \
     --url https://staging.atlantic.api.herodotus.cloud/atlantic-query?apiKey=$1 \
     --header 'Content-Type: multipart/form-data' \
     --form layout=auto \
-    --form cairoVm=python \
+    --form cairoVm=rust \
     --form 'programFile=@compiled.json' \
-    --form 'inputFile=@input.json' \
     --form cairoVersion=cairo0 \
     --form result=$2 \
     --form mockFactHash=false \
